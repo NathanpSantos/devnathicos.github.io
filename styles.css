@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primaria: #0ea5e9;
+    --secundaria: #38bdf8;
+    --maisEscuro: #0f172a;
+    --escuro: #0f172a;
+    --claro: #f1f5f9;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    color: var(--claro);
+    position: relative;
+    z-index: 0;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: transparent;
+}
+
+.navegacao {
+    position: fixed;
+    background: rgba(15, 23, 42, 0.85);
+    width: 100%;
+    z-index: 100;
+    padding: 1.2rem 0;
+    backdrop-filter: blur(10px);
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 600;
+    position: relative;
+}
+
+.menu-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.foto-perfil {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 4px solid var(--vidro);
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.5);
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--primaria);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.digitando {
+    font-size: 1.3rem;
+    border-right: 2px solid var(--claro);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: digita 4s steps(40, end) forwards;
+    color: var(--claro);
+}
+
+@keyframes digita {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.sobre, .habilidades, .projetos, .contato {
+    padding: 6rem 2rem;
+}
+
+.sobre-titulo {
+    font-size: 2.5rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icones-habilidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.icones-habilidades img {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+    transition: transform 0.3s;
+}
+
+.icones-habilidades img:hover {
+    transform: scale(1.1);
+}
+
+.projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.projetos-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+}
+
+.projetos-imagem {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.caixa-textos-projetos {
+    padding: 1rem;
+}
+
+.info-projeto {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primaria);
+    text-align: center;
+}
+
+.paragrafo-projeto {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.formulario-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+}
+
+.campo-form, .text-form {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid var(--vidro);
+    color: var(--claro);
+    margin-bottom: 1rem;
+}
+
+.botao-form {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    color: var(--claro);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+.rodape {
+    text-align: center;
+    padding: 2rem;
+    color: var(--claro);
+    background: #0f172a;
+    font-size: 0.9rem;
+}
