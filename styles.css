@@ -38,25 +38,31 @@ body {
     background: transparent;
 }
 
+/* Navbar */
 .navegacao {
     position: fixed;
-    background: rgba(15, 23, 42, 0.85);
     width: 100%;
+    background: rgba(15, 23, 42, 0.85);
     z-index: 100;
     display: flex;
     align-items: center;
-    justify-content: center; /* Alinha os itens no centro */
-    padding: 0.8rem 2rem;
-    gap: 2rem;
+    justify-content: center; /* Centraliza os itens filhos */
+    padding: 1rem 2rem;
 }
 
-.logo {
-    position: absolute;
-    left: 2rem;
-    display: flex;
-    align-items: center;
+.logo img {
+    width: 45px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.7));
+    transition: transform 0.3s;
 }
 
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Menu */
 .menu {
     display: flex;
     list-style: none;
