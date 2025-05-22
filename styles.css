@@ -39,31 +39,36 @@ body {
 }
 
 .logo img {
-    width: 50px;  /* tamanho ideal, você pode ajustar para 40px, 60px... */
+    width: 50px;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.7)); /* efeito glow opcional */
+    filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.7));
+    transition: transform 0.3s;
 }
 
+.logo img:hover {
+    transform: scale(1.05);
+}
 
-/* Navegação */
 .navegacao {
     position: fixed;
     background: rgba(15, 23, 42, 0.85);
     width: 100%;
     z-index: 100;
-    padding: 1.2rem 0;
-    background-color: rgba(15, 23, 42, 0.85);
-     display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .menu {
     display: flex;
     list-style: none;
-    justify-content: center;
     gap: 2rem;
 }
 
