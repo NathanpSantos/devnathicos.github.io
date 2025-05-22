@@ -39,8 +39,10 @@ body {
 }
 
 .logo img {
-    width: 10px; /* ou ajuste como preferir */
+    width: 50px;  /* tamanho ideal, você pode ajustar para 40px, 60px... */
     height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.7)); /* efeito glow opcional */
 }
 
 
