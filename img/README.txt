@@ -1,1 +1,0 @@
-Coloque aqui sua imagem de perfil como 'PERFIL.jpeg'.
