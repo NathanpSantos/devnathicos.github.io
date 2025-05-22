@@ -38,6 +38,12 @@ body {
     background: transparent;
 }
 
+.logo img {
+    width: 50px; /* ou ajuste como preferir */
+    height: auto;
+}
+
+
 /* Navegação */
 .navegacao {
     position: fixed;
